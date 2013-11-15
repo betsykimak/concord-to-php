@@ -2,12 +2,12 @@
 	<head>
 		<title>Hello Test</title>
 		<meta name="copyright" content="Copyright 2013, Small Picture, Inc.">
-		<script src="http://xamppdev/concord/libraries/jquery-1.9.1.min.js"></script>  
-		<script src="http://xamppdev/concord/libraries/bootstrap.min.js"></script>
-		<script src="http://xamppdev/concord/concord.js"></script>
-		<script src="http://xamppdev/concord/concordUtils.js"></script>
-		<link href="http://xamppdev/concord/concord.css" rel="stylesheet" />
-		<link href="http://xamppdev/concord/libraries/bootstrap.css" rel="stylesheet" />
+		<script src="http://www.example.com/concord/libraries/jquery-1.9.1.min.js"></script>  
+		<script src="http://www.example.com/concord/libraries/bootstrap.min.js"></script>
+		<script src="http://www.example.com/concord/concord.js"></script>
+		<script src="http://www.example.com/concord/concordUtils.js"></script>
+		<link href="http://www.example.com/concord/concord.css" rel="stylesheet" />
+		<link href="http://www.example.com/concord/libraries/bootstrap.css" rel="stylesheet" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
 		
 		<script>
@@ -23,7 +23,7 @@
 			var appConsts = {
 				"productname": "Hello Test",
 				"productnameForDisplay": "Hello Test",
-				"domain": "http://xamppdev", 
+				"domain": "http://www.example.com", 
 				"version": "0.52"
 				}
 			var appPrefs = {
