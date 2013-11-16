@@ -6,10 +6,10 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 
 + One outline = one post
 + Drops opml files on the server, one file per post
-+ OPML files are named using the post title
++ OPML files are named as `concord-posttitle.opml`
 + Most recent posts are displayed first
 + Two sample OPML files are included
-+ Like <a href="http://www.fargo.io">Fargo</a>, store photos elsewhere and reference 
++ Like <a href="http://fargo.io">Fargo</a>, store photos elsewhere and reference 
 + Uses localStorage for fast editing
 + Uses DOM for robust PHP parsing
 + Upgraded `concord.js` for fontawesome 4.0.1
@@ -19,7 +19,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 
 1. Place files on a web server (either in root or a subdirectory)
 2. Edit `concord-ui.php` here:
-    1. Change the location of files in <head> references
+    1. Change the location of files in `<head>` references
     2. Under `var appConsts` change `domain: http://www.example.com` to your web server
      
 ### How to use
@@ -37,7 +37,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 
 1. From a web browser, go to http://www.example.com/viewopml.php (or your subdirectory)
 
-This renders and displays the OPML output, a list of nodes and attributes, and sample HTML. Basically, the full OPML structure, ready for customization.
+This renders and displays the OPML output, a list of nodes and attributes, and sample HTML. Basically, the full OPML structure, ready for your customization.
 
 ### More about Concord
 
