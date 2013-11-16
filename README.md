@@ -7,8 +7,10 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 + One outline = one post
 + Drops opml files on the server, one file per post
 + OPML files are named as `concord-posttitle.opml`
++ Builds a page of posts from multiple OPML files
 + Most recent posts are displayed first
 + Two sample OPML files are included
++ Retains toolbars similar to <a href="http://fargo.io">Fargo</a>'s 
 + Like <a href="http://fargo.io">Fargo</a>, store photos elsewhere and reference 
 + Uses localStorage for fast editing
 + Uses DOM for robust PHP parsing
@@ -37,7 +39,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 
 1. From a web browser, go to http://www.example.com/viewopml.php (or your subdirectory)
 
-This renders and displays the OPML output, a list of nodes and attributes, and sample HTML. Basically, the full OPML structure, ready for your customization.
+This renders and displays the OPML output, a list of nodes and attributes, and sample HTML. Basically, the full OPML structure to help you grasp DOM parsing, and is ready for your customization.
 
 ### More about Concord
 
