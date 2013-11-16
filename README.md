@@ -13,7 +13,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 + Retains toolbars similar to <a href="http://fargo.io">Fargo</a>'s 
 + Like <a href="http://fargo.io">Fargo</a>, store photos elsewhere and reference 
 + Uses localStorage for fast editing
-+ Uses DOM for robust PHP parsing
++ Uses PHP DOM for robust XML parsing
 + Upgraded `concord.js` for fontawesome 4.0.1
 + Minor tweaks of `concord.js` and `concordUtils.js`
 
