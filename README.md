@@ -5,7 +5,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 ### What it does
 
 + One outline = one post
-+ Drops opml files on the server, one file per post
++ Drops OPML files on the server, one file per post
 + OPML files are named as `concord-posttitle.opml`
 + Builds a page of posts from multiple OPML files
 + Most recent posts are displayed first
