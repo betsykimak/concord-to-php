@@ -10,30 +10,34 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 + Builds a page of posts from multiple OPML files
 + Most recent posts are displayed first
 + Two sample OPML files are included
-+ Retains toolbars similar to <a href="http://fargo.io">Fargo</a>'s 
-+ Like <a href="http://fargo.io">Fargo</a>, store photos elsewhere and reference 
++ Retains toolbars similar to <a href="http://fargo.io">Fargo</a>'s
++ Like <a href="http://fargo.io">Fargo</a>, store photos elsewhere and reference
 + Uses localStorage for fast editing
 + Uses PHP DOM for robust XML parsing
 + Upgraded `concord.js` for fontawesome 4.0.1
 + Minor tweaks of `concord.js` and `concordUtils.js`
 
+*Working on it...* 
+
++ IE compatibility
++ Two-way publishing
+
 ### Installation
 
 1. Place files on a web server (either in root or a subdirectory)
-2. Edit `concord-ui.php` here:
-    1. Change the location of files in `<head>` references
-    2. Under `var appConsts` change `domain: http://www.example.com` to your web server
+2. Edit `concord-ui.php` and change the location of files in `<head>` references
      
 ### How to use
 
 *Writing:*    
 
 1. From a web browser, go to http://www.example.com/concord-ui.php (or your subdirectory)
-2. Start typing
-3. Name the post title, then click Save Title
-4. When finished, click Save Work
-5. To publish a post, click Export OPML
-6. To write a new post, click Clear All Data/New
+2. Click New Post/Clear
+3. Start typing
+4. Name the post title, then click Save Title
+5. When finished, click Save Work
+6. To publish a post, click Export OPML
+7. Repeat :)
 
 *Output:*
 
