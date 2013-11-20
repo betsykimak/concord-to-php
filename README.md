@@ -25,7 +25,7 @@ A standalone Concord publisher with a PHP parser to render OPML files. Use as a 
 ### Installation
 
 1. Place files on a web server (either in root or a subdirectory)
-2. Edit `concord-ui.php` and change the location of files in `<head>` references
+2. Edit `concord-ui.php` and verify the location of files in `<head>` references
      
 ### How to use
 
