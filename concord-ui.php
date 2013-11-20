@@ -2,12 +2,12 @@
 	<head>
 		<title>Hello Test</title>
 		<meta name="copyright" content="Copyright 2013, Small Picture, Inc.">
-		<script src="http://www.example.com/concord/libraries/jquery-1.9.1.min.js"></script>  
-		<script src="http://www.example.com/concord/libraries/bootstrap.min.js"></script>
-		<script src="http://www.example.com/concord/concord.js"></script>
-		<script src="http://www.example.com/concord/concordUtils.js"></script>
-		<link href="http://www.example.com/concord/concord.css" rel="stylesheet" />
-		<link href="http://www.example.com/concord/libraries/bootstrap.css" rel="stylesheet" />
+		<script src="concord/libraries/jquery-1.9.1.min.js"></script>  
+		<script src="concord/libraries/bootstrap.min.js"></script>
+		<script src="concord/concord.js"></script>
+		<script src="concord/concordUtils.js"></script>
+		<link href="concord/concord.css" rel="stylesheet" />
+		<link href="concord/libraries/bootstrap.css" rel="stylesheet" />
 		<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
 		
 		<script>
@@ -18,12 +18,14 @@
 			// This page is modified from Concord Example 1: https://github.com/scripting/concord/blob/master/example1/index.html
 			// Here's a good resource for localStorage: http://diveintohtml5.info/storage.html
 						
-			var name1 = localStorage.getItem('name1'); //call last stored title - BK
+			var name1 = localStorage.getItem("name1"); //call last stored title - BK
+			
+			var domain = document.location.hostname; // get the domain constant
 			
 			var appConsts = {
 				"productname": "Hello Test",
 				"productnameForDisplay": "Hello Test",
-				"domain": "http://www.example.com", 
+				"domain": domain, 
 				"version": "0.52"
 				}
 			var appPrefs = {
@@ -173,7 +175,7 @@
 				}	
 				
 			function saveOutlineNow () { //grab any edits to the title - BK 
-				localStorage.savedOpmltext = opOutlineToXml (localStorage.getItem('name1'), appPrefs.authorName, appPrefs.authorEmail, appPrefs.authorEmail);
+				localStorage.savedOpmltext = opOutlineToXml (localStorage.getItem("name1"), appPrefs.authorName, appPrefs.authorEmail, appPrefs.authorEmail);
 				localStorage.ctOpmlSaves++; // the GMT time
 				opClearChanged ();
 				console.log ("saveOutlineNow: " + localStorage.savedOpmltext.length + " chars.");
@@ -218,16 +220,16 @@
 	
 			var auto_refresh = setInterval(
 			function () {
-				$("#showtitle").text('');
+				$("#showtitle").text("");
 				var storedValue = localStorage.getItem("name1");
-				$('#showtitle').text(storedValue).fadeIn("slow");
+				$("#showtitle").text(storedValue).fadeIn("slow");
 				}, 300); // refresh in milliseconds
 
 				// Save Work
 				
 			function saveWork () { //grab any edits to the title - BK
 				location.reload(false); // reload page  
-				localStorage.savedOpmltext = opOutlineToXml (localStorage.getItem('name1'), appPrefs.authorName, appPrefs.authorEmail, appPrefs.authorEmail);
+				localStorage.savedOpmltext = opOutlineToXml (localStorage.getItem("name1"), appPrefs.authorName, appPrefs.authorEmail, appPrefs.authorEmail);
 				localStorage.ctOpmlSaves++; // the GMT time
 				opClearChanged ();
 				console.log ("saveOutlineNow: " + localStorage.savedOpmltext.length + " chars.");
@@ -236,10 +238,10 @@
 				// Clear LocalStorage
 				
 			function clearall () {
-				localStorage.removeItem('name1');
+				localStorage.removeItem("name1");
 				opWipe (); // from concordUtils.js
 				//localStorage.clear();
-				localStorage.setItem('name1','New Title');
+				localStorage.setItem("name1","New Title");
 				};	
 				
 				// ----------------------------------------------------
@@ -491,7 +493,7 @@
 		</div>
 		
 		<div class="btn-group" id="actionmenu">
-			<button class="btn btn-primary" type="button" onClick="clearall ();">Clear All Data | New</button>
+			<button class="btn btn-primary" type="button" onClick="clearall ();">New Post | Clear</button>
 			<button data-func="0" class="btn btn-success" type="button">Save Work</button>
 			<button class="btn btn-success" href="#" id="saveit" type="button">Export OPML</button>
 		</div>
@@ -553,12 +555,12 @@
 			
 			// Bootstrap tooltips
 
-			$('#toolmenu').tooltip({
-				'selector': 'a',
-				'placement': 'left',
+			$("#toolmenu").tooltip({
+				"selector": "a",
+				"placement": "left",
 				});
 
-			$('#toolmenu').tooltip('toggle');
+			$("#toolmenu").tooltip("toggle");
 	
 			// Add Link button
 	
@@ -586,11 +588,11 @@
 			// Save OPML button
 			
 			// clear result div  
-			$("#opmsg").html('');
+			$("#opmsg").html("");
 			//var data = opOutlineToXml (localStorage.savedOpmltext); // use to print ompl to page, as this: &lt;head&gt;
 			var data = localStorage.savedOpmltext; // use to export raw opml from localStorage, as this: <head>
 			$(document).ready(function(){
-			$('#saveit').click(function() {
+			$("#saveit").click(function() {
 
 			$.ajax({        
 				type: "POST",
@@ -608,9 +610,10 @@
 				});      
 				return false; 
 				});  
-				});			
+				});
 			
 		</script>
+		
 		
 			<a name="codeview"></a>
 			<div id="codeview">
@@ -621,9 +624,9 @@
 				// clear div
 				var auto_refresh = setInterval(
 				function () {
-					$("#showopml").text('');
+					$("#showopml").text("");
 					var lostore = localStorage.savedOpmltext;
-					$('#showopml').text(lostore).fadeIn("slow");
+					$("#showopml").text(lostore).fadeIn("slow");
 					}, 5000); // refresh in milliseconds
 		</script>
 				

@@ -9,10 +9,11 @@ var_dump($_REQUEST);
 
 $myArray = $_POST['testData'];
 $name = $_POST['name'];
+$name = str_replace(' ', '-', $name); // replace spaces in title
 
 //$filename = 'ajaxout.txt'; // use to overwrite a single file
-$filename = 'concord-' . $name . '.opml'; // use to export one opml file per title
-$somecontent = $myArray;
+$filename = 'concord-' . $name . '.opml'; // use to export one opml file per title 
+$somecontent = stripslashes($myArray); // strip backslashes 
 
     //check if file exists
     if (file_exists($filename)) {
